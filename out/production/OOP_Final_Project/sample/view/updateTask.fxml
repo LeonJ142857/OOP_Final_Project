@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.UpdateTaskController">
+   <children>
+      <Label layoutX="101.0" layoutY="22.0" text="Update Task">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="updateTaskField" layoutX="24.0" layoutY="68.0" prefHeight="40.0" prefWidth="256.0" promptText="Task">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="updateDescriptionField" layoutX="24.0" layoutY="134.0" prefHeight="40.0" prefWidth="256.0" promptText="Description">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <DatePicker fx:id="updateDeadlineField" layoutX="24.0" layoutY="197.0" prefHeight="40.0" prefWidth="256.0" promptText="Date Due" />
+      <Button fx:id="updateTaskButton" layoutX="101.0" layoutY="254.0" mnemonicParsing="false" opacity="0.9" prefHeight="32.0" prefWidth="99.0" style="-fx-background-color: #95bf22;" text="Update Task" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.ListController">
+   <children>
+      <AnchorPane layoutY="100.0" prefHeight="300.0" prefWidth="700.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <ListView fx:id="taskList" layoutX="292.0" layoutY="14.0" prefHeight="278.0" prefWidth="400.0">
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.31578946113586426" green="0.24415205419063568" blue="0.24415205419063568" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </ListView>
+            <Label layoutX="81.0" layoutY="21.0" text="Add a new task">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="listTaskField" layoutX="14.0" layoutY="58.0" prefHeight="40.0" prefWidth="256.0" promptText="Task">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="listDescriptionField" layoutX="14.0" layoutY="124.0" prefHeight="40.0" prefWidth="256.0" promptText="Description">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <DatePicker fx:id="listDeadlineField" layoutX="14.0" layoutY="187.0" prefHeight="40.0" prefWidth="256.0" promptText="Date Due" />
+            <Button fx:id="listAddTaskButton" layoutX="106.0" layoutY="247.0" mnemonicParsing="false" opacity="0.9" prefHeight="32.0" prefWidth="88.0" style="-fx-background-color: #95bf22;" text="Add Task" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="100.0" prefWidth="700.0" style="-fx-background-color: #bf360c;">
+         <children>
+            <Text fill="WHITE" layoutX="271.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Do It(s)" wrappingWidth="157.654296875">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="listRefreshButton" fitHeight="20.0" fitWidth="20.0" layoutX="663.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icon-update.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="611.0" layoutY="69.0" text="Refresh" textFill="#fcfcfc">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

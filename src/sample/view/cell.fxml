@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane fx:id="rootAnchorPane" prefHeight="81.0" prefWidth="370.0" style="-fx-background-color: #00001a;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="dateLabel" alignment="CENTER_RIGHT" layoutX="213.0" layoutY="61.0" prefHeight="20.0" prefWidth="153.0" text="DateCreated" textAlignment="RIGHT">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.4217227101325989" green="0.5657894611358643" blue="0.2776559591293335" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.7049808429118773">
+                     <color>
+                        <Color red="0.38793858885765076" green="0.7631579041481018" blue="0.3462475538253784" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="iconImageView" fitHeight="41.0" fitWidth="41.0" layoutX="8.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icon-task-white.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="taskLabel" layoutX="54.0" layoutY="1.0" prefHeight="17.0" prefWidth="142.0" text="Task">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.007662835249042145">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.1876218318939209" green="0.22335933148860931" blue="0.7236841917037964" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="descriptionLabel" layoutX="52.0" layoutY="28.0" prefHeight="33.0" prefWidth="304.0" style="-fx-background-color: brown;" text="Description" textFill="#c9b9b9">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="deleteButton" fitHeight="25.0" fitWidth="25.0" layoutX="343.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icon-delete-white.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label fx:id="deadlineLabel" layoutX="5.0" layoutY="60.0" prefHeight="20.0" prefWidth="118.0" text="DateDue">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.38793858885765076" green="0.7631579041481018" blue="0.3462475538253784" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.007662835249042145">
+                     <color>
+                        <Color red="0.38793858885765076" green="0.7631579041481018" blue="0.3462475538253784" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.026819923371647503">
+                     <color>
+                        <Color red="0.5263158082962036" green="0.12914229929447174" blue="0.12914229929447174" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.5463917525773195">
+                     <color>
+                        <Color red="0.7894737124443054" green="0.1461988240480423" blue="0.1461988240480423" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.9310344827586204">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.17847999930381775" green="0.46000000834465027" blue="0.14720000326633453" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="listUpdateButton" fitHeight="25.0" fitWidth="25.0" layoutX="321.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icon-edit-white.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

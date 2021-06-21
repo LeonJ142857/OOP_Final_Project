@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>sample</OriginalElement>
+  <nodes>
+    <node x="643.25" y="132.0">sample.model.User</node>
+    <node x="0.0" y="1161.0">sample.Main</node>
+    <node x="423.0" y="1161.0">sample.animations.FadeIn</node>
+    <node x="766.2499999999999" y="569.0">sample.HelperMethods</node>
+    <node x="141.49999999999994" y="820.0">sample.controller.CellController</node>
+    <node x="412.24999999999994" y="502.5">sample.database.DatabaseHandler</node>
+    <node x="36.5" y="491.0">sample.controller.UpdateTaskController</node>
+    <node x="257.9889937106918" y="993.0">sample.controller.ListController</node>
+    <node x="1089.6666666666665" y="0.0">sample.database.Const</node>
+    <node x="935.7389937106918" y="831.0">sample.controller.SignupController</node>
+    <node x="679.2389937106918" y="831.0">sample.controller.LoginController</node>
+    <node x="74.23899371069183" y="109.5">sample.model.Task</node>
+    <node x="1302.6666666666665" y="176.0">sample.animations.Shake</node>
+    <node x="194.0" y="1161.0">sample.animations.FadeOut</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="sample.controller.ListController" target="sample.database.DatabaseHandler" relationship="TO_ONE">
+      <point x="75.0000062893082" y="-15.0" />
+      <point x="494.0" y="1039.5" />
+      <point x="494.0" y="769.0" />
+      <point x="563.75" y="769.0" />
+      <point x="-15.0" y="117.0" />
+    </edge>
+    <edge source="sample.controller.ListController" target="sample.model.Task" relationship="CREATE">
+      <point x="6.289308203122346E-6" y="-61.5" />
+      <point x="332.989" y="938.5" />
+      <point x="385.0" y="938.5" />
+      <point x="385.0" y="215.5" />
+      <point x="126.50000628930815" y="0.0" />
+    </edge>
+    <edge source="sample.controller.ListController" target="sample.animations.Shake" relationship="CREATE">
+      <point x="-14.999993710691797" y="-61.5" />
+      <point x="317.989" y="967.0" />
+      <point x="1362.667" y="967.0" />
+      <point x="3.3333333340124227E-4" y="39.5" />
+    </edge>
+    <edge source="sample.controller.ListController" target="sample.database.DatabaseHandler" relationship="CREATE">
+      <point x="75.0000062893082" y="0.0" />
+      <point x="765.0" y="1054.5" />
+      <point x="765.0" y="940.0" />
+      <point x="851.739" y="940.0" />
+      <point x="851.739" y="784.0" />
+      <point x="578.75" y="784.0" />
+      <point x="0.0" y="117.0" />
+    </edge>
+    <edge source="sample.controller.CellController" target="sample.database.DatabaseHandler" relationship="CREATE">
+      <point x="5.6843418860808015E-14" y="-50.5" />
+      <point x="249.5" y="784.0" />
+      <point x="578.75" y="784.0" />
+      <point x="0.0" y="117.0" />
+    </edge>
+    <edge source="sample.controller.ListController" target="sample.database.Const" relationship="DEPENDENCY">
+      <point x="75.0000062893082" y="15.0" />
+      <point x="1168.75" y="1069.5" />
+      <point x="1168.75" y="461.0" />
+      <point x="1186.167" y="461.0" />
+      <point x="3.3333333340124227E-4" y="215.5" />
+    </edge>
+    <edge source="sample.database.DatabaseHandler" target="sample.model.User" relationship="DEPENDENCY">
+      <point x="15.0" y="117.0" />
+      <point x="593.75" y="808.0" />
+      <point x="1117.239" y="808.0" />
+      <point x="1117.239" y="1279.5" />
+      <point x="-17.5" y="1279.5" />
+      <point x="-17.5" y="92.0" />
+      <point x="755.75" y="92.0" />
+      <point x="0.0" y="-83.5" />
+    </edge>
+    <edge source="sample.controller.LoginController" target="sample.model.User" relationship="CREATE">
+      <point x="6.289308203122346E-6" y="-39.5" />
+      <point x="756.739" y="808.0" />
+      <point x="1117.239" y="808.0" />
+      <point x="1117.239" y="1279.5" />
+      <point x="-17.5" y="1279.5" />
+      <point x="-17.5" y="92.0" />
+      <point x="755.75" y="92.0" />
+      <point x="0.0" y="-83.5" />
+    </edge>
+    <edge source="sample.HelperMethods" target="sample.animations.Shake" relationship="CREATE">
+      <point x="173.48900000000015" y="50.5" />
+      <point x="1132.239" y="967.0" />
+      <point x="1362.667" y="967.0" />
+      <point x="3.3333333340124227E-4" y="39.5" />
+    </edge>
+    <edge source="sample.controller.ListController" target="sample.model.Task" relationship="TO_MANY">
+      <point x="-74.9999937106918" y="0.0" />
+      <point x="19.0" y="1054.5" />
+      <point x="19.0" y="442.0" />
+      <point x="357.0" y="442.0" />
+      <point x="357.0" y="200.5" />
+      <point x="126.50000628930815" y="-15.0" />
+    </edge>
+    <edge source="sample.controller.SignupController" target="sample.database.DatabaseHandler" relationship="CREATE">
+      <point x="6.289308203122346E-6" y="39.5" />
+      <point x="1017.739" y="940.0" />
+      <point x="851.739" y="940.0" />
+      <point x="851.739" y="784.0" />
+      <point x="578.75" y="784.0" />
+      <point x="0.0" y="117.0" />
+    </edge>
+    <edge source="sample.controller.ListController" target="sample.model.Task" relationship="TO_ONE">
+      <point x="-74.9999937106918" y="0.0" />
+      <point x="19.0" y="1054.5" />
+      <point x="19.0" y="442.0" />
+      <point x="357.0" y="442.0" />
+      <point x="357.0" y="200.5" />
+      <point x="126.50000628930815" y="-15.0" />
+    </edge>
+    <edge source="sample.database.DatabaseHandler" target="sample.model.Task" relationship="DEPENDENCY">
+      <point x="-166.5" y="0.0" />
+      <point x="385.0" y="619.5" />
+      <point x="385.0" y="215.5" />
+      <point x="126.50000628930815" y="0.0" />
+    </edge>
+    <edge source="sample.controller.SignupController" target="sample.model.User" relationship="CREATE">
+      <point x="6.289308203122346E-6" y="-39.5" />
+      <point x="1017.739" y="808.0" />
+      <point x="1117.239" y="808.0" />
+      <point x="1117.239" y="1279.5" />
+      <point x="-17.5" y="1279.5" />
+      <point x="-17.5" y="92.0" />
+      <point x="755.75" y="92.0" />
+      <point x="0.0" y="-83.5" />
+    </edge>
+    <edge source="sample.controller.LoginController" target="sample.database.DatabaseHandler" relationship="CREATE">
+      <point x="6.289308203122346E-6" y="39.5" />
+      <point x="756.739" y="940.0" />
+      <point x="851.739" y="940.0" />
+      <point x="851.739" y="784.0" />
+      <point x="578.75" y="784.0" />
+      <point x="0.0" y="117.0" />
+    </edge>
+    <edge source="sample.controller.CellController" target="sample.controller.UpdateTaskController" relationship="DEPENDENCY">
+      <point x="-100.5" y="-50.5" />
+      <point x="9.999999999999943" y="128.5" />
+    </edge>
+    <edge source="sample.controller.ListController" target="sample.controller.CellController" relationship="CREATE">
+      <point x="-67.5" y="-61.5" />
+      <point x="15.98899371069183" y="50.5" />
+    </edge>
+    <edge source="sample.database.DatabaseHandler" target="sample.database.Const" relationship="DEPENDENCY">
+      <point x="0.0" y="-117.0" />
+      <point x="578.75" y="461.0" />
+      <point x="1186.167" y="461.0" />
+      <point x="3.3333333340124227E-4" y="215.5" />
+    </edge>
+    <edge source="sample.controller.LoginController" target="sample.HelperMethods" relationship="DEPENDENCY">
+      <point x="77.5000062893082" y="0.0" />
+      <point x="894.0" y="870.5" />
+      <point x="894.0" y="793.0" />
+      <point x="958.75" y="793.0" />
+      <point x="1.1368683772161603E-13" y="50.5" />
+    </edge>
+    <edge source="sample.controller.CellController" target="sample.model.Task" relationship="DEPENDENCY">
+      <point x="108.00000000000006" y="0.0" />
+      <point x="385.0" y="870.5" />
+      <point x="385.0" y="215.5" />
+      <point x="126.50000628930815" y="0.0" />
+    </edge>
+    <edge source="sample.controller.LoginController" target="sample.database.DatabaseHandler" relationship="TO_ONE">
+      <point x="-77.4999937106918" y="-15.0" />
+      <point x="494.0" y="855.5" />
+      <point x="494.0" y="769.0" />
+      <point x="563.75" y="769.0" />
+      <point x="-15.0" y="117.0" />
+    </edge>
+    <edge source="sample.controller.LoginController" target="sample.model.Task" relationship="DEPENDENCY">
+      <point x="-77.4999937106918" y="0.0" />
+      <point x="385.0" y="870.5" />
+      <point x="385.0" y="215.5" />
+      <point x="126.50000628930815" y="0.0" />
+    </edge>
+    <edge source="sample.controller.SignupController" target="sample.HelperMethods" relationship="DEPENDENCY">
+      <point x="-81.9999937106918" y="0.0" />
+      <point x="894.0" y="870.5" />
+      <point x="894.0" y="793.0" />
+      <point x="958.75" y="793.0" />
+      <point x="1.1368683772161603E-13" y="50.5" />
+    </edge>
+    <edge source="sample.controller.CellController" target="sample.database.DatabaseHandler" relationship="TO_ONE">
+      <point x="108.00000000000006" y="-15.0" />
+      <point x="494.0" y="855.5" />
+      <point x="494.0" y="769.0" />
+      <point x="563.75" y="769.0" />
+      <point x="-15.0" y="117.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.44153846153846155" showDependencies="true" x="689.5" y="640.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>packageLocal</VISIBILITY>
+</Diagram>
+
