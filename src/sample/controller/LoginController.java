@@ -43,56 +43,58 @@ public class LoginController {
 
     @FXML
     void initialize() {
-        databaseHandler = new DatabaseHandler();
+        databaseHandler = new DatabaseHandler(); //instantiate custom made databaseHandler object
 
-        loginButton.setOnAction(event->{
-            String loginText = loginUsername.getText().trim();
+        loginButton.setOnAction(event->{//event handler for loginSignUpButton
+            String loginText = loginUsername.getText().trim();//trim for any whitespaces
             String loginPwd = loginPassword.getText().trim();
 
+            //create User object and set the username and password
             User user = new User();
             user.setUserName(loginText);
             user.setPassword(loginPwd);
 
+            //get ResultSet from databaseHandler fetching data from database
             ResultSet userRow =  databaseHandler.getUser(user);
             try {
-                if (userRow.next()) {
+                if (userRow.next()) { //userRow is not empty
                     try {
                         Task.userId = userRow.getInt("userid");
-                    } catch (SQLException throwables) {
+                    } catch (SQLException throwables) { //SQLException handling when fail to fetch data
                         throwables.printStackTrace();
                     }
-                    showToDoListScreen();
+                    showToDoListScreen(); //takes the user to ToDoListScreen
                 }
-                else
-                    loginShake(loginUsername, loginPassword);
+                else //userRow ResultSet is null
+                    loginShake(loginUsername, loginPassword); //shake the login and password field
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
             }
         });
-        loginSignUpButton.setOnAction(event->{
+        loginSignUpButton.setOnAction(event->{//event handler for loginSignUpButton
             //Take users to Sign Up screen
-            loginSignUpButton.getScene().getWindow().hide();
-            FXMLLoader loader = new FXMLLoader();
+            loginSignUpButton.getScene().getWindow().hide(); //hide the current window
+            FXMLLoader loader = new FXMLLoader(); //instantiate fxml loader
             loader.setLocation(getClass().getResource(
-                    "/sample/view/signup.fxml"));
+                    "/sample/view/signup.fxml")); //get the fxml we want to load
             try {
-                loader.load();
-            } catch (IOException e) {
+                loader.load(); //load the fxml file
+            } catch (IOException e) { //exception handling if loading of fxml file fails
                 e.printStackTrace();
             }
-            Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.showAndWait();
+            Parent root = loader.getRoot(); //get the root pane of the fxml file loaded
+            Stage stage = new Stage(); //create a new stage
+            stage.setScene(new Scene(root)); //set the scene of the stage to contain root
+            stage.showAndWait(); //show the stage and wait till other process
         });
     }
     private void showToDoListScreen(){
-        loginSignUpButton.getScene().getWindow().hide();
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/sample/view/list.fxml"));
+        loginSignUpButton.getScene().getWindow().hide(); //hide the current window
+        FXMLLoader loader = new FXMLLoader(); // instantiate fxmlLoader
+        loader.setLocation(getClass().getResource("/sample/view/list.fxml")); //load fxml
         try {
-            loader.load();
-        } catch (IOException e) {
+            loader.load(); //load the fxml
+        } catch (IOException e) { //exception handling when laoding fails
             e.printStackTrace();
         }
         Parent root = loader.getRoot();

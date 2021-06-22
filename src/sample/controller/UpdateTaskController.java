@@ -46,7 +46,7 @@ public class UpdateTaskController {
 
     public void setUpdateDeadlineField(String deadline) {
 //        updateDeadlineField.setValue(new LocalDateStringConverter().fromString(deadline));
-        updateDeadlineField.setValue(LocalDate.parse(deadline));
+        updateDeadlineField.setValue(LocalDate.parse(deadline)); //parse date string
     }
 
     public String getTask(){

@@ -45,36 +45,39 @@ public class SignupController {
 
     @FXML
     void initialize() {
-        signUpButton.setOnAction(event-> {
+        signUpButton.setOnAction(event-> { //signUpButton event handling
             createUser();
         });
-        signUpLoginButton.setOnAction(event->{
+        signUpLoginButton.setOnAction(event->{ //signUpLoginButton event handling
             //Take users to Login Screen
-            signUpLoginButton.getScene().getWindow().hide();
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/view/login.fxml"));
+            signUpLoginButton.getScene().getWindow().hide(); // hide the current window
+            FXMLLoader loader = new FXMLLoader(); //create FXMLLoader
+            loader.setLocation(getClass().getResource("/sample/view/login.fxml")); //set file location
             try {
-                loader.load();
-            } catch (IOException e) {
+                loader.load(); //load fxml
+            } catch (IOException e) { //loader failure exception
                 e.printStackTrace();
             }
-            Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.show();
+            Parent root = loader.getRoot(); //get the root pane of fxml
+            Stage stage = new Stage(); //create stage
+            stage.setScene(new Scene(root)); //set the scene of stage
+            stage.show(); //show the stage
         });
     }
     private void createUser(){
+        //get string from text fields
         String name = signUpFirstName.getText();
         String lastName = signUpLastName.getText();
         String userName = signUpUsername.getText();
         String password = signUpPassword.getText();
 
+        // if no field is empty
         if(!name.equals("") || !lastName.equals("") || !userName.equals("") || !password.equals("")){
-            User user = new User(name, lastName, userName, password);
+            User user = new User(name, lastName, userName, password); //encapsulate
             DatabaseHandler databaseHandler = new DatabaseHandler();
             databaseHandler.signUpUser(user);
         } else{
+            //shake the sign up text fields
             signUpShake(signUpFirstName, signUpLastName, signUpUsername, signUpPassword);
         }
     }

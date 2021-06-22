@@ -36,9 +36,7 @@ public class Task {
         this.task = task;
     }
 
-    public String getDeadline() {
-        return deadline;
-    }
+    public String getDeadline() {return deadline;}
 
     public void setDeadline(String deadline) {
         this.deadline = deadline;
